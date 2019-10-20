@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bar&#305;&#351; Ad&#305;g&#252;zel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-15 11:02:02 &#214;S"/>
+        <attribute name="created" value="QmFyxLHFnyBBZMSxZ8O8emVsO0JBUklTLUFESUdVWkVMOzIwMTktMTAtMTU7MTA6MzQ6MzEgw5ZTOzQ1NDc="/>
+        <attribute name="edited" value="QmFyxLHFnyBBZMSxZ8O8emVsO0JBUklTLUFESUdVWkVMOzIwMTktMTAtMTU7MTE6MDI6MDIgw5ZTOzM7NDY1MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&quot;Girilen say&#305;n&#305;n tek mi &#231;ift mi oldu&#287;unu g&#246;steren algoritma&quot;"/>
+            <declare name="sayi" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen say&#305; giriniz.&quot;" newline="True"/>
+            <do expression="sayi &lt; 0">
+                <input variable="sayi"/>
+                <if expression="sayi &lt; 0">
+                    <then>
+                        <output expression="&quot;Pozitif bir de&#287;er giriniz:&quot;" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </do>
+            <if expression="sayi % 2 == 0">
+                <then>
+                    <output expression="&quot;Girilen say&#305; &#231;ifttir.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Girilen say&#305; tektir.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

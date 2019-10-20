@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bar&#305;&#351; Ad&#305;g&#252;zel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-08 10:26:57 &#214;S"/>
+        <attribute name="created" value="QmFyxLHFnyBBZMSxZ8O8emVsO0JBUklTLUFESUdVWkVMOzIwMTktMTAtMDg7MTA6MTE6NDEgw5ZTOzQ1NDU="/>
+        <attribute name="edited" value="QmFyxLHFnyBBZMSxZ8O8emVsO0JBUklTLUFESUdVWkVMOzIwMTktMTAtMDg7MTA6MjY6NTcgw5ZTOzI7NDY2Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Bilgisayar taraf&#305;ndan rastgele &#252;retilen say&#305;y&#305; tahmin etme algoritmas&#305;"/>
+            <declare name="rand0m, guess, counter" type="Integer" array="False" size=""/>
+            <assign variable="rand0m" expression="Random(100)"/>
+            <assign variable="counter" expression="0"/>
+            <output expression="&quot;Bir tahminde bulununuz:&quot;" newline="True"/>
+            <do expression="guess != rand0m">
+                <input variable="guess"/>
+                <if expression="guess &gt; rand0m">
+                    <then>
+                        <output expression="&quot;L&#252;tfen daha k&#252;&#231;&#252;k bir say&#305; giriniz.&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="guess &lt; rand0m">
+                            <then>
+                                <output expression="&quot;L&#252;tfen daha b&#252;y&#252;k bir say&#305; giriniz.&quot;" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="counter" expression="counter + 1"/>
+            </do>
+            <output expression="guess &amp;&quot; say&#305;s&#305;n&#305; &quot; &amp; counter &amp; &quot;. denemede bildiniz!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

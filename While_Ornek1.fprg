@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bar&#305;&#351; Ad&#305;g&#252;zel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-08 10:21:10 &#214;S"/>
+        <attribute name="created" value="QmFyxLHFnyBBZMSxZ8O8emVsO0JBUklTLUFESUdVWkVMOzIwMTktMTAtMDg7MTA6MTE6NDEgw5ZTOzQ1NDU="/>
+        <attribute name="edited" value="QmFyxLHFnyBBZMSxZ8O8emVsO0JBUklTLUFESUdVWkVMOzIwMTktMTAtMDg7MTA6MjE6MTAgw5ZTOzE7NDY1MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Bilgisayar taraf&#305;ndan rastgele &#252;retilen say&#305;y&#305; tahmin etme algoritmas&#305;"/>
+            <declare name="rand0m, guess, counter" type="Integer" array="False" size=""/>
+            <assign variable="rand0m" expression="Random(100)"/>
+            <assign variable="counter" expression="1"/>
+            <output expression="&quot;Bir tahminde bulununuz:&quot;" newline="True"/>
+            <input variable="guess"/>
+            <while expression="guess &lt;&gt; rand0m">
+                <if expression="guess &gt; rand0m">
+                    <then>
+                        <output expression="&quot;Daha k&#252;&#231;&#252;k say&#305;da tahmin edininiz:&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Daha b&#252;y&#252;k say&#305;da tahmin edininiz:&quot;" newline="True"/>
+                    </else>
+                </if>
+                <input variable="guess"/>
+                <assign variable="counter" expression="counter + 1"/>
+            </while>
+            <output expression="guess &amp;&quot; say&#305;s&#305;n&#305; &quot; &amp; counter &amp; &quot;. denemede bildiniz!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

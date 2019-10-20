@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bar&#305;&#351; Ad&#305;g&#252;zel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-08 10:46:34 &#214;S"/>
+        <attribute name="created" value="QmFyxLHFnyBBZMSxZ8O8emVsO0JBUklTLUFESUdVWkVMOzIwMTktMTAtMDg7MTA6MTE6NDEgw5ZTOzQ1NDU="/>
+        <attribute name="edited" value="QmFyxLHFnyBBZMSxZ8O8emVsO0JBUklTLUFESUdVWkVMOzIwMTktMTAtMDg7MTA6NDY6MzQgw5ZTOzEyOzQ3MTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Bilgisayar taraf&#305;ndan rastgele 50-100 aras&#305; say&#305; &#252;retip say&#305;y&#305; tahmin etme algoritmas&#305;"/>
+            <declare name="rand0m, guess, counter" type="Integer" array="False" size=""/>
+            <assign variable="rand0m" expression="Random(100) + 50"/>
+            <assign variable="counter" expression="0"/>
+            <while expression="rand0m &lt; 50 || rand0m &gt; 100">
+                <assign variable="rand0m" expression="Random(100) + 50"/>
+            </while>
+            <output expression="&quot;Bir tahminde bulununuz:&quot;" newline="True"/>
+            <do expression="guess != rand0m">
+                <input variable="guess"/>
+                <if expression="guess &gt; rand0m">
+                    <then>
+                        <output expression="&quot;L&#252;tfen daha k&#252;&#231;&#252;k de&#287;er giriniz.&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="guess &lt; rand0m">
+                            <then>
+                                <output expression="&quot;L&#252;tfen b&#252;y&#252;k bir de&#287;er giriniz.&quot;" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="counter" expression="counter + 1"/>
+            </do>
+            <output expression="guess &amp;&quot; say&#305;s&#305;n&#305; &quot; &amp; counter &amp; &quot;. denemede bildiniz!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

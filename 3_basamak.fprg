@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bar&#305;&#351; Ad&#305;g&#252;zel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-15 11:17:59 &#214;S"/>
+        <attribute name="created" value="QmFyxLHFnyBBZMSxZ8O8emVsO0JBUklTLUFESUdVWkVMOzIwMTktMTAtMTU7MTA6MDY6MDQgw5ZTOzQ1NDY="/>
+        <attribute name="edited" value="QmFyxLHFnyBBZMSxZ8O8emVsO0JBUklTLUFESUdVWkVMOzIwMTktMTAtMTU7MTE6MTc6NTkgw5ZTOzE4OzQ3MjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&quot;Girilen pozitif 3 basamakl&#305; say&#305;n&#305;n basamak de&#287;erlerinin toplam&#305;n&#305; yazan algoritma&quot;"/>
+            <declare name="sayi, yuzdelik, ondalik, birlik, uzunluk" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen 3 basamakl&#305; bir say&#305; girin:&quot;" newline="True"/>
+            <do expression="uzunluk != 3 || sayi &lt; 0">
+                <input variable="sayi"/>
+                <assign variable="uzunluk" expression="Len(ToString(sayi))"/>
+                <if expression="uzunluk == 3 &amp;&amp; sayi &gt; 0">
+                    <then>
+                        <assign variable="yuzdelik" expression="sayi / 100"/>
+                        <assign variable="ondalik" expression="(sayi / 10) % 10"/>
+                        <assign variable="birlik" expression="sayi % 10"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Negatif de&#287;er veya 3 basamaktan fazla/az de&#287;er girdiniz.&quot;" newline="False"/>
+                        <output expression="&quot;L&#252;tfen tekrar 3 basamakl&#305; bir pozitif say&#305; giriniz:&quot;" newline="True"/>
+                    </else>
+                </if>
+            </do>
+            <output expression="&quot;Toplam :&quot; &amp;(yuzdelik + ondalik + birlik)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
